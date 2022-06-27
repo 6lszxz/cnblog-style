@@ -1,0 +1,124 @@
+<style id="ceshicss">
+  @media (max-width: 767px){
+    #set_btn_box {width: 100vw;left: 0;right: 0;bottom: 0;background: hsla(0,0%,100%,.6);height: 49px;display: flex;justify-content: space-between;align-items: center;padding: 12px 40px;border-top: 1px solid #e8e8e8;box-sizing: border-box;}
+    .set_btn {margin-top: 0;}
+    .set_btn.fly_top.fadeIn.animated {position: absolute;right: 10px;bottom: 60px;}
+    .container{bottom:50px}}
+  #mainContent{width:90%}
+</style>
+<link href="https://github.com/6lszxz/cnblog-style/blob/master/tippy.min.css" rel="stylesheet">
+<script src="https://github.com/6lszxz/cnblog-style/blob/master/popper.min.js"></script>
+<script src="https://github.com/6lszxz/cnblog-style/blob/master/tippy.js"></script>
+<link rel='stylesheet' href='https://github.com/6lszxz/cnblog-style/blob/master/animate.min.css'>
+<script src="https://github.com/6lszxz/cnblog-style/blob/master/font_1825850_klax1ao4o6.js"></script>
+<script src="https://github.com/6lszxz/cnblog-style/blob/master/three.min.js"></script>
+<script src='https://github.com/6lszxz/cnblog-style/blob/master/star.js'></script>
+<link rel="stylesheet" href="https://github.com/6lszxz/cnblog-style/blob/master/OwO.min.css" />
+<script src="https://github.com/6lszxz/cnblog-style/blob/master/OwO2.min.js"></script>
+<script src="https://github.com/6lszxz/cnblog-style/blob/master/cute-cnblogs2.js"></script>
+<script src="https://github.com/6lszxz/cnblog-style/blob/master/monitoring2.js"></script>
+
+<script>
+  miluframe({
+    Youself:'https://www.cnblogs.com/Codewith6lszxz/', /*个人的博客园链接*/
+    /*博客园导航信息*/
+    custom:[{
+      name:'首页',
+      link:'https://www.cnblogs.com/Codewith6lszxz/',
+      istarget:false
+    },{
+      name:'联系',
+      link:'',
+      istarget:true
+    },{
+      name:'留言板',
+      link:'',
+      istarget:false
+    },{
+      name:'相册',
+      link:'',
+      istarget:false
+    },{
+      name:'友链',
+      link:'',
+      istarget:false
+    },{
+      name:'维护',
+      link:'',
+      istarget:false
+    },{
+      name:'投喂',
+      link:'',
+      istarget:false
+    },{
+      name:'管理',
+      link:'https://i.cnblogs.com/',
+      istarget:true
+    }],
+    /*向别人展示自己的友链信息*/
+    resume:{
+      "name":"",
+      "link":"",
+      "headurl":"",
+      "introduction":"大道至简，知易行难。"
+    },
+    /*友链信息*/
+    unionbox:[{
+      "name":"",
+      "introduction":"",
+      "url":"",
+      "headurl":""
+    },{
+      "name":"",
+      "introduction":"大道至简，知易行难。",
+      "url":"",
+      "headurl":""
+    }],
+    /*友链表格头信息，这个可以忽略*/
+    details:[{
+      field: 'name',
+      literal: '昵称',
+    },{
+      field: 'introduction',
+      literal: '标语',
+    },{
+      field: 'url',
+      literal: '链接地址',
+    },{
+      field: 'headurl',
+      literal: '头像地址',
+    }],
+    /*浏览器顶部小图标*/
+    logoimg:'https://images.cnblogs.com/cnblogs_com/blogs/729701/galleries/2180958/o_220627111518_128px-PS_025_3_icon.png',
+    /*文章页面标题前的图标，此处图标有扩展，下面会提到图标*/
+    cuteicon:['icon-caomei','icon-boluo','icon-huolongguo','icon-chengzi','icon-hamigua','icon-lizhi','icon-mangguo','icon-liulian','icon-lizi','icon-lanmei','icon-longyan','icon-shanzhu','icon-pingguo','icon-mihoutao','icon-niuyouguo','icon-xigua','icon-putao','icon-xiangjiao','icon-ningmeng','icon-yingtao','icon-taozi','icon-shiliu','icon-ximei','icon-shizi'],
+    /*赞赏，若true则显示此按钮，false则不显示*/
+    isGratuity:true,
+    /*赞赏按钮焦点显示赞赏内容，内容可自行更改*/
+    gratuity:'<div class="popper_box"><p><b>要请我喝奶茶吗  (づ｡◕ᴗᴗ◕｡)づ</b> </p><div class="popper_box_con"><div class="popper_box_con_li"><img src="" alt="">微信扫码</div><div class="popper_box_con_li"><img src="" >支付宝扫码</div></div><p><b>留下一句你觉得很励志与美的话给我吧~</b>&nbsp;&nbsp;<b><a href="">GO</a></b></div>'
+  })
+</script>
+<!-- 点赞 -->
+<canvas width="1777" height="841" style="position: fixed; left: 0px; top: 0px; z-index: 2147483647; pointer-events: none;"></canvas><script src="https://blog-static.cnblogs.com/files/miluluyo/mouse-click.js"></script>
+
+
+
+<script>
+    /*在文章页面添加古诗词*/
+  $("#navigator").after('<div class="poem-wrap"><div class="poem-border poem-left"></div><div class="poem-border poem-right"></div><h1>念两句诗</h1><div id="poem_sentence"></div><div id="poem_info"></div></div>')
+</script>
+<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+<script type="text/javascript">
+  jinrishici.load(function(result) {
+    var sentence = document.querySelector("#poem_sentence")
+    var info = document.querySelector("#poem_info")
+    sentence.innerHTML = result.data.content
+    info.innerHTML = '【' + result.data.origin.dynasty + '】' + result.data.origin.author + '《' + result.data.origin.title + '》'
+  });
+</script>
+
+
+<!--音乐，只在PC端宽度>1000px时显示-->
+
+
+
